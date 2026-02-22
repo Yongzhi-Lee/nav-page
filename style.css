@@ -31,7 +31,7 @@ body {
     background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
     
     /* 如果你想用图片，可以取消下面这行 background-image 的注释 (删除开头的 /* 和结尾的 */ ) */
-    background-image: 'cover.jpg'; 
+    background-image: url('https://images.unsplash.com/photo-1472214103451-9374bd1c798e?q=80&w=2000&auto=format&fit=crop');
     
     background-size: cover;
     background-position: center;
