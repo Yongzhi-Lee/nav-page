@@ -20,3 +20,26 @@ function updateTime() {
 setInterval(updateTime, 1000);
 // 页面加载时立即执行一次
 updateTime();
+
+function changeEngine() {
+    const engine = document.getElementById('engine-select').value;
+    const form = document.getElementById('search-form');
+    const input = document.getElementById('search-input');
+
+    if (engine === 'bing') {
+        form.action = 'https://www.bing.com/search';
+        input.name = 'q';
+        input.placeholder = '使用 Bing 搜索...';
+    } else if (engine === 'google') {
+        form.action = 'https://www.google.com/search';
+        input.name = 'q';
+        input.placeholder = '使用 Google 搜索...';
+    } else if (engine === 'baidu') {
+        form.action = 'https://www.baidu.com/s';
+        input.name = 'wd'; // 百度独有的搜索参数
+        input.placeholder = '使用百度搜索...';
+    }
+    
+    // 切换后自动让输入框获取焦点，方便直接打字
+    input.focus();
+}

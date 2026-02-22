@@ -79,7 +79,29 @@ header {
 .search-box form:focus-within {
     background: rgba(255, 255, 255, 0.2);
 }
+/* 搜索引擎选择器美化 */
+.search-box select {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 5px;
+    outline: none;
+    cursor: pointer;
+    /* 隐藏浏览器默认的丑陋下拉箭头 */
+    appearance: none; 
+    -webkit-appearance: none;
+    /* 右侧加一条半透明分割线 */
+    border-right: 1px solid rgba(255, 255, 255, 0.3); 
+    margin-right: 10px;
+    font-weight: 500;
+}
 
+/* 下拉选项的背景色，防止白底白字看不清 */
+.search-box select option {
+    background: #203a43; 
+    color: white;
+}
 .search-box input {
     flex: 1;
     background: transparent;

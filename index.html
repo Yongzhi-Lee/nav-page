@@ -15,12 +15,17 @@
             <p id="date">YYYY年MM月DD日</p>
         </header>
 
-        <div class="search-box">
-            <form action="https://www.google.com/search" method="GET" target="_blank">
-                <input type="text" name="q" placeholder="输入关键字搜索..." autocomplete="off" autofocus>
-                <button type="submit">🔍</button>
-            </form>
-        </div>
+	<div class="search-box">
+				<form id="search-form" action="https://www.bing.com/search" method="GET" target="_blank">
+					<select id="engine-select" onchange="changeEngine()">
+						<option value="bing">必应</option>
+						<option value="google">谷歌</option>
+						<option value="baidu">百度</option>
+					</select>
+					<input type="text" id="search-input" name="q" placeholder="使用 Bing 搜索..." autocomplete="off" autofocus>
+					<button type="submit">🔍</button>
+				</form>
+	</div>
 
         <main class="bookmarks">
             <div class="category">
