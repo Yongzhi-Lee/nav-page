@@ -147,6 +147,11 @@ header {
     padding: 1.5rem;
     box-shadow: 0 8px 32px rgba(0,0,0,0.2);
     transition: transform 0.3s ease, background 0.3s ease;
+    
+    /* 👇 新增：固定卡片高度（你可以根据需要修改 240px 这个数值） */
+    height: 240px; 
+    display: flex;
+    flex-direction: column;
 }
 
 .category:hover {
@@ -166,6 +171,11 @@ header {
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
+    
+    /* 👇 新增：自动填满卡片剩余高度，超出则显示滚动条 */
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 5px; /* 给右侧滚动条留出一点呼吸空间 */
 }
 
 .links a {
@@ -180,4 +190,23 @@ header {
 .links a:hover {
     opacity: 1;
     transform: translateX(5px);
+}
+/* ================================
+   自定义滚动条美化 (毛玻璃风格)
+   ================================ */
+.links::-webkit-scrollbar {
+    width: 6px; /* 滚动条的宽度 */
+}
+
+.links::-webkit-scrollbar-track {
+    background: transparent; /* 轨道透明 */
+}
+
+.links::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2); /* 半透明白色滑块 */
+    border-radius: 10px; /* 圆角 */
+}
+
+.links::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.4); /* 鼠标悬浮时稍微亮一点 */
 }
